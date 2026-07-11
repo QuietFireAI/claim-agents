@@ -8,7 +8,7 @@ description: "Claim file and records. Use when interactions need the append-only
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** System of record (claim file, audit)
 **Autonomy tier:** Autonomous record keeping; the record is append-only - corrections are new entries that reference what they correct, never edits
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

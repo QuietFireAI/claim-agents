@@ -8,7 +8,7 @@ description: "Claim triage and severity. Use when a FNOL package needs severity 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Coordination (severity, assignment, lifecycle)
 **Autonomy tier:** Autonomous severity scoring and routing recommendation; assignment executes on human-confirmed rules; NEVER determines coverage
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

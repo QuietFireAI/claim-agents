@@ -7,7 +7,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "playbooks")
 def build(p):
     s = f'---\nname: {p["num"]}-{p["slug"]}\ndescription: "{p["desc"]}"\n---\n\n'
     s += f'# Playbook {p["num"]} - {p["name"]}\n\n'
-    s += "**Swarm:** DispatcherAgents Claim Swarm (Insurance)\n**Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)\n**Version:** 0.1 (DRAFT - not implemented)\n\n"
+    s += "**Swarm:** DispatcherAgents Claim Swarm (Insurance)\n**Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)\n**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)\n\n"
     s += "## Trigger\n" + p["trigger"] + "\n\n## Preconditions\n"
     for x in p["pre"]: s += f"- {x}\n"
     s += "Precondition unmet = playbook does not start; `clarification.request` to human.\n\n## Deployment sequence\n"

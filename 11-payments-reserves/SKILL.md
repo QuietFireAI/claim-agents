@@ -8,7 +8,7 @@ description: "Payments and reserves records. Use when payment issuance or reserv
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Financial records (payments, reserves)
 **Autonomy tier:** RECORDS ONLY - every payment issuance and reserve change executes solely on a signed human `payment.authority` envelope; this agent moves no money on its own initiative, ever
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

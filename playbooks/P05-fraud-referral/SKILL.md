@@ -7,7 +7,7 @@ description: "Swarm deployment: threshold-crossing signal record to SIU referral
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 09's aggregated signal score crosses the owner-ratified threshold on a claim.

@@ -8,7 +8,7 @@ description: "Compliance and regulatory deadlines. Use when jurisdiction clocks 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Regulatory engine (fair claims handling, DOI)
 **Autonomy tier:** Autonomous clock tracking and alerting; regulatory responses and any external filing are human-signed
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

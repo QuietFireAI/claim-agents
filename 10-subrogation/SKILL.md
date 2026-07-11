@@ -8,7 +8,7 @@ description: "Subrogation. Use when claim evidence suggests third-party recovery
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Recovery identification (subrogation preparation)
 **Autonomy tier:** Autonomous opportunity identification and demand-package assembly; pursuit, waiver, and negotiation decisions are human
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

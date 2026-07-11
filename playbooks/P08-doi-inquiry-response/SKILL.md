@@ -7,7 +7,7 @@ description: "Swarm deployment: regulator inquiry to a signature-ready response 
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 `doi.inquiry` routed to 12 from any intake point (01 at FNOL, 04 from a reply, human forward).

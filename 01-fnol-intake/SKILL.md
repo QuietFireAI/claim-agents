@@ -8,7 +8,7 @@ description: "First notice of loss intake. Use when a new loss is reported on an
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Intake (first notice of loss)
 **Autonomy tier:** Autonomous capture and acknowledgment; NEVER states coverage, fault, or claim value
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

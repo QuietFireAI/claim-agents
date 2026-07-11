@@ -1,4 +1,4 @@
-# DispatcherAgents Claim Swarm - Roster v0.1 (DRAFT - owner ratification pending)
+# DispatcherAgents Claim Swarm - Roster v0.1 (ratified 2026-07-11 - owner sign-off)
 
 15 agents, hub-and-spoke via 00. All inter-agent communication is a logged
 envelope through the Dispatcher; the route-space is closed (identity/routes.json).

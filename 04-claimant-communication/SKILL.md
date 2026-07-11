@@ -8,7 +8,7 @@ description: "Claimant communication. Use when a claimant or insured needs a tem
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Communication hub (claimant/insured-facing)
 **Autonomy tier:** Autonomous sends from adjuster-approved templates; ANY off-template or coverage-adjacent message requires human approval before send
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

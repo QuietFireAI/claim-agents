@@ -7,7 +7,7 @@ description: "Swarm deployment: reported loss to verified, assigned, clock-insta
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 `claim.fnol` package lands at 02, any channel, any hour.

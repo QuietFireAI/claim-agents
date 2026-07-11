@@ -8,7 +8,7 @@ description: "Estimate and valuation data. Use when a claim needs estimate packa
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Analysis assembly (estimates, valuations)
 **Autonomy tier:** Autonomous data assembly and calculation per approved methods; the NUMBER is a work product for the adjuster - never communicated outward, never a settlement position
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ---
 

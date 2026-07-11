@@ -1,4 +1,4 @@
-# IDENTITY - Insurance Claim Agent (v0.1 DRAFT)
+# IDENTITY - Insurance Claim Agent (v0.1, ratified 2026-07-11 - owner sign-off)
 
 The side-load: this file plus routes.json and priority.json turn the generic
 DispatcherAgents runtime into a claims-desk swarm. dispatcher-agents is the
@@ -38,7 +38,7 @@ regulatory filings, payments, and closure.
 - Tuple layer per agent (DECISIONS.md) + swarm tuples (SWARM.md)
 - Conduct constants: MANNERS.md (hash-registered at boot attestation)
 
-## Playbook priority classes (per core JIT doctrine - DRAFT, owner ratification pending)
+## Playbook priority classes (per core JIT doctrine - ratified 2026-07-11 - owner sign-off)
 
 Class 1 (statutory/SLA-critical): P01 FNOL front door, P05 fraud referral,
 P08 DOI response. Class 2 (active lifecycle + books): P02, P03, P04, P07,
@@ -58,7 +58,6 @@ from dispatcher.loader import load_identity
 ident = load_identity("/path/to/claim-agents")
 ```
 
-The loader is fail-closed: no routes.json, no track, no load. A DRAFT priority
-table loads with the draft state warned and audited - never silently.
+The loader is fail-closed: no routes.json, no track, no load. The loader audits the priority table's status on every load - never silently.
 
-## Status: v0.1 DRAFT - owner ratification pending; not runtime-hardened; no licensed legal or regulatory review.
+## Status: v0.1 ratified 2026-07-11 (owner sign-off); not runtime-hardened; no licensed legal or regulatory review.

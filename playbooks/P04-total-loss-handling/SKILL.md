@@ -7,7 +7,7 @@ description: "Swarm deployment: human-declared total loss through valuation supp
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
 
 ## Trigger
 Human declares total loss on a claim (signed direction referencing 08's threshold fact).
