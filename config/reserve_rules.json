@@ -1,0 +1,17 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "reserve_rules",
+ "_purpose": "Reserve-setting rules the records lane may cite",
+ "_fields": [
+  "rule_id",
+  "condition",
+  "reserve_basis"
+ ],
+ "entries": [
+  {
+   "rule_id": "<example>",
+   "condition": "<example>",
+   "reserve_basis": "<example>"
+  }
+ ]
+}

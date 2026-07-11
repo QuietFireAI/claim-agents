@@ -1,0 +1,19 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "carrier_rule_table",
+ "_purpose": "Coverage-adjacent routing rules and deadlines per line of business",
+ "_fields": [
+  "rule_id",
+  "line",
+  "rule",
+  "deadline_days"
+ ],
+ "entries": [
+  {
+   "rule_id": "<example>",
+   "line": "<example>",
+   "rule": "<example>",
+   "deadline_days": "<example>"
+  }
+ ]
+}

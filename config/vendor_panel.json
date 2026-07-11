@@ -1,0 +1,19 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "vendor_panel",
+ "_purpose": "Adjuster/inspection/mitigation panel with credentials",
+ "_fields": [
+  "vendor_id",
+  "service",
+  "license_ref",
+  "insurance_current_until"
+ ],
+ "entries": [
+  {
+   "vendor_id": "<example>",
+   "service": "<example>",
+   "license_ref": "<example>",
+   "insurance_current_until": "<example>"
+  }
+ ]
+}
