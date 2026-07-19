@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | ALL TEMPLATES RATIFIED Jeff Phillips 2026-07-18 (owner blanket sign-off, Section B decision)",
  "_table": "message_templates",
  "_purpose": "Approved claimant communication templates",
  "_fields": [
@@ -19,7 +19,7 @@
    "template_id": "representation_acknowledged",
    "purpose": "One-time receipt acknowledgment to a newly-noticed representative, sent ONLY on human direction",
    "body": "We acknowledge receipt of your letter of representation dated {date} regarding claim {claim_number}. All further communication on this claim will be directed to your office.",
-   "approved_by": "<owner name/date>"
+   "approved_by": "Jeff Phillips 2026-07-18"
   }
  ]
 }

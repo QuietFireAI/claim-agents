@@ -41,11 +41,8 @@ variance. Identity-independent doctrine.
 
 ---
 
-## PROPOSED thresholds — pending owner ratification
+## Ratified thresholds (owner: Jeff Phillips, 2026-07-18, approved as written)
 
-These numbers are proposals, not ratified. They fail to the conservative
-side until the owner ratifies or amends them (statutory rules always govern
-where shorter).
 
 | Parameter | Proposed | Consumer |
 |---|---|---|
