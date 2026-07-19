@@ -7,7 +7,7 @@ description: "Swarm deployment: recovery signal to preserved evidence and demand
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `subro.signal` matching the recovery-opportunity checklist at 10.

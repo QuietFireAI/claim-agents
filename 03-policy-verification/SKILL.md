@@ -8,7 +8,7 @@ description: "Policy verification. Use when a claim needs policy-record facts on
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Systems lookup (policy data)
 **Autonomy tier:** Autonomous data lookup and factual reporting; verification is NOT coverage determination - it reports what the policy record says, never what it means for this loss
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

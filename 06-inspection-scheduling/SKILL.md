@@ -8,7 +8,7 @@ description: "Inspection and appraisal scheduling. Use when field inspections, d
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Scheduling execution (inspections, appraisals)
 **Autonomy tier:** Autonomous scheduling within adjuster availability rules; access commitments follow the insured's stated constraints, never pressure
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

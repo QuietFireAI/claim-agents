@@ -7,7 +7,7 @@ description: "Swarm deployment: salvage value and subrogation facts to signed, e
 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `salvage.record` at 10 (from valuation 08 or posted proceeds 11), or an accepted `subro.package` returning as a recovery to execute.

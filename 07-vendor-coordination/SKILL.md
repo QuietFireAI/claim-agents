@@ -8,7 +8,7 @@ description: "Vendor coordination. Use when panel vendors (mitigation, rental, s
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Vendor execution (mitigation, repair, rental, IA firms)
 **Autonomy tier:** Autonomous coordination with panel vendors under existing agreements; NEW vendors, rate changes, and scope increases are human-approved
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

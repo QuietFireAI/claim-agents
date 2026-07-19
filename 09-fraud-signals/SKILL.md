@@ -8,7 +8,7 @@ description: "Fraud signals. Use when indicator observations need aggregation, s
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Pattern observation (SIU referral preparation)
 **Autonomy tier:** Autonomous indicator aggregation and referral-package preparation; the referral DECISION and every accusation are human (SIU) only
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

@@ -8,7 +8,7 @@ description: "Daily operations. Use for the morning book, end-of-day books with 
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Operations cadence (morning book, EOD books, surge)
 **Autonomy tier:** Autonomous book assembly and presentation; the human reads the book and directs - the book never self-executes its own recommendations
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

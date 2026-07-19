@@ -8,7 +8,7 @@ description: "Claim swarm dispatcher. The hub: validates every (from, intent, to
 **Swarm:** DispatcherAgents Claim Swarm (Insurance)
 **Type:** Hub / router / single point of control (and of failure - by design)
 **Autonomy tier:** Full autonomy over routing mechanics; ZERO autonomy over content - the Dispatcher answers no client-facing question itself, ever
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

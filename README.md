@@ -6,8 +6,7 @@ property & casualty claims swarm, loadable into the content-neutral
 The runtime never contains vertical text; this repo never contains transport
 code. That split is the architecture.
 
-**Status: v0.1 ratified 2026-07-11 - owner sign-off. Not runtime-hardened. No
-licensed legal, regulatory, or insurance-practice review has been performed.**
+**Status: v0.2 ratified 2026-07-18 (extended from v0.1 2026-07-11) - owner sign-off. WORKING BUILD: vendored dispatcher core + real spokes, 17-test end-to-end suite (`tests_claim/`), live demo (`tools/run_demo.py`), and an MCP mount (`docs/MOUNTING.md`). No licensed legal, regulatory, or insurance-practice review has been performed.**
 
 ## See it work (2 minutes)
 
@@ -53,7 +52,7 @@ What it never does - the five absolute lines (identity/IDENTITY-insurance-claim-
 | Path | What it is |
 |---|---|
 | `identity/routes.json` | The closed track: 35 (intent, senders, receivers) routes - single source of truth |
-| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11) |
+| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11; extended & ratified 2026-07-18) |
 | `identity/IDENTITY-insurance-claim-agent.md` | The identity declaration |
 | `00-dispatcher/ ... 14-daily-operations/` | 15 agent SKILL.md + DECISIONS.md (tuple layer) |
 | `playbooks/P01 ... P10` | Deployment playbooks: FNOL front door through EOD books |
