@@ -20,5 +20,7 @@ constrains everything.
 - (compliance.hold received mid-run, suspend the named claim's traffic; only 12's release or human direction resumes it)
 - (two agents claim the same open request, the earlier record.request wins; the later is re-pointed with the earlier's envelope_id)
 - (a spoke reports done without its artifact, treat as not-done; taint gate applies - the artifact is the proof)
+- (authority intent arrives with no registered signer for that lane, reject fail-closed + integrity.violation; an unregistered authority lane does not exist)
+- (an agent's wait on another passes its timeout, agent.status to 14; waits are visible by rule, never discovered by surprise)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

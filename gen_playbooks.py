@@ -52,7 +52,8 @@ CA = {
    ["Morning baseline absent: sweep names that first and proceeds on records alone."]),
 }
 for p in PB:
-    p["completion"], p["abort"] = CA[p["num"]]
+    if p["num"] in CA:
+        p["completion"], p["abort"] = CA[p["num"]]
 
 def main():
     os.makedirs(ROOT, exist_ok=True)

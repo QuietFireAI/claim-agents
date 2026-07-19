@@ -1,4 +1,4 @@
-# IDENTITY - Insurance Claim Agent (v0.1, ratified 2026-07-11 - owner sign-off)
+# IDENTITY - Insurance Claim Agent (v0.2 - ratified 2026-07-11; extended & ratified 2026-07-18, owner sign-off)
 
 The side-load: this file plus routes.json and priority.json turn the generic
 DispatcherAgents runtime into a claims-desk swarm. dispatcher-agents is the
@@ -33,16 +33,16 @@ regulatory filings, payments, and closure.
 ## Structure
 
 - 15 agents (00-dispatcher + 14 spokes) - see ROSTER.md
-- 35 routes, closed track - identity/routes.json is the single source
-- 10 playbooks (P01-P10) - priority classes in identity/priority.json
+- 44 routes, closed track - identity/routes.json is the single source
+- 14 playbooks (P01-P14) - priority classes in identity/priority.json
 - Tuple layer per agent (DECISIONS.md) + swarm tuples (SWARM.md)
 - Conduct constants: MANNERS.md (hash-registered at boot attestation)
 
 ## Playbook priority classes (per core JIT doctrine - ratified 2026-07-11 - owner sign-off)
 
 Class 1 (statutory/SLA-critical): P01 FNOL front door, P05 fraud referral,
-P08 DOI response. Class 2 (active lifecycle + books): P02, P03, P04, P07,
-P09, P10. Class 3 (recovery preparation): P06.
+P08 DOI response, P11 representation halt. Class 2 (active lifecycle + books): P02, P03, P04, P07,
+P09, P10. Class 3 (recovery preparation): P06, P13. Class 2 also: P12, P14.
 
 ## Loading
 

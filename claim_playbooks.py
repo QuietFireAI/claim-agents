@@ -178,4 +178,88 @@ PB = [
    ]),
   ],
   gates=["The sweep never reassigns - it names (14's tuple). Reassignment is the human's morning decision."]),
+
+ dict(num="P11", slug="representation-notice-halt", name="Representation Notice Halt",
+  desc="Swarm deployment: attorney/representation notice to claim-wide contact halt with a clean handoff package. Agents 01/04/05 (detection), 02, 12, 13. Absolute line 5: represented claimants are human-only - this playbook is the halt executing.",
+  trigger="`representation.notice` from any detection channel: FNOL language (01), claimant channel (04), or documents (05).",
+  pre=["The notice is captured verbatim with source, date, and the representative's stated identity - a halt anchored to a record, not a vibe."],
+  phases=[
+   ("Phase 1 - Halt (same turn)", [
+    ("1","04","ALL direct claimant contact halts on the claim; pending outbound held","(hold; `agent.status` \u2192 14)","held-message inventory exists"),
+    ("2","02","Claim posture set to represented; halt confirmed claim-wide","`claim.assignment` update \u2192 12, 13","posture on the claim record"),
+   ]),
+   ("Phase 2 - Package and re-anchor", [
+    ("3","13","Claim file snapshot: notice verbatim, held messages, open items","`record.response` \u2192 02","handoff package complete"),
+    ("4","12","Fair-claims-practice clocks re-checked for represented posture","`deadline.alert` \u2192 02, 14 (as needed)","every contact-based deadline re-anchored"),
+    ("5","02","Deliver the posture package for human direction on the channel","`closure.package`-style delivery \u2192 human, 13","human direction requested with the full record"),
+   ]),
+  ],
+  gates=["No outbound to the claimant or representative from any agent until explicit human direction - inbound is logged and routed, never answered.",
+         "No coverage statement in the held-message review or anywhere else (absolute line 1)."],
+  completion="Contact halted claim-wide same turn, held inventory and file snapshot delivered, clocks re-anchored, human direction requested.",
+  abort=["Notice authenticity uncertain (unsigned, unverifiable source): halt anyway; clarification to human - the conservative posture is the halt.",
+         "Statutory contact required while halted (acknowledgment clocks): route to human with both obligations named - conflicts of law are human calls."]),
+
+ dict(num="P12", slug="policy-change-midclaim", name="Policy Change Mid-Claim",
+  desc="Swarm deployment: discovered policy change (endorsement, cancellation, reinstatement) to re-anchored claim facts. Agents 03, 02, 08, 12, 13. A change re-opens verification forward - it never rewrites posted history, and it never becomes a coverage statement.",
+  trigger="`policy.change.notice` at 03 from re-verify or carrier feed, differing from the policy facts the claim was anchored on.",
+  pre=["The prior policy facts are on record with timestamps - a change is only a change against a recorded baseline."],
+  phases=[
+   ("Phase 1 - Blast radius", [
+    ("1","03","Report the change with both fact sets and timestamps","`policy.change.notice` \u2192 02, 08, 12, 13","old and new policy facts on record"),
+    ("2","13","Return every work product anchored on the prior facts","`record.response` \u2192 02, 08","affected-item list with citations"),
+   ]),
+   ("Phase 2 - Re-anchor", [
+    ("3","08","Valuation re-anchored to corrected facts; both bases named","`estimate.package` \u2192 02, 11, 13","delta shown as fact, not judgment"),
+    ("4","12","Statutory and contract clocks re-derived; conservatism rule","`deadline.alert` \u2192 02, 04, 14 (as needed)","earlier date governs, on record"),
+    ("5","02","Human notified with the change package - determinations are licensed","`clarification.request` \u2192 human","human holds every coverage-adjacent call"),
+   ]),
+  ],
+  gates=["No coverage statement, implication, or reassurance to anyone at any step (absolute line 1) - the change is reported as fact only.",
+         "Posted history never edited to match new facts - the change is recorded forward only."],
+  completion="Blast radius named, valuation and clocks re-anchored to corrected facts, human notified with both fact sets; posted history intact.",
+  abort=["Change implies retroactive cancellation/rescission: human immediately with the full record - rescission is a legal conversation.",
+         "Carrier feed and policy system disagree: both reported with timestamps; the discrepancy is the fact (03's discrepancy doctrine)."]),
+
+ dict(num="P13", slug="salvage-recovery-cascade", name="Salvage & Recovery Cascade",
+  desc="Swarm deployment: salvage value and subrogation facts to signed, executed recovery. Agents 08, 11, 10, 13. Recovery is money: demands, acceptances, and reserve effects move only on signed authority.",
+  trigger="`salvage.record` at 10 (from valuation 08 or posted proceeds 11), or an accepted `subro.package` returning as a recovery to execute.",
+  pre=["Salvage values and liability facts are on record from valuation and the claim file - recovery arithmetic runs on posted facts only."],
+  phases=[
+   ("Phase 1 - Assemble", [
+    ("1","10","Recovery package: subro facts, salvage values, netting arithmetic shown","`subro.package` \u2192 human, 13","every number carries its source"),
+    ("2","13","Claim-file support attached (existence/type/date/source)","`record.response` \u2192 10","file citations complete"),
+   ]),
+   ("Phase 2 - Signed execution", [
+    ("3","10","Demand issues / acceptance executes on signed authority only","(await `recovery.authority` \u2190 human)","signed envelope on the chain first"),
+    ("4","11","Proceeds post; books reconcile to $0.00 variance","`payment.record` + `salvage.record` \u2192 12, 13","reconciliation clean or exception raised"),
+   ]),
+  ],
+  gates=["No demand, settlement acceptance, or waiver moves without signed `recovery.authority` - recovery is money, same doctrine as payments.",
+         "Netting is arithmetic shown, never judgment applied - allocation questions route to the human."],
+  completion="Recovery executed on signed authority, proceeds posted, books at $0.00 variance; or the blocking question named to the human.",
+  abort=["Counterparty disputes liability or amount: package the dispute verbatim for the human - the swarm never negotiates.",
+         "Proceeds do not reconcile to the posted expectation: reconciliation.exception; the variance is named, never absorbed."]),
+
+ dict(num="P14", slug="records-request-response", name="Records Request Response",
+  desc="Swarm deployment: external records request to human-approved disclosure inside the response clock. Agents 13, 12, 05, 04, 02. The swarm inventories existence; a human approves every release - privilege and privacy are human calls.",
+  trigger="External records request lands: claimant file access, examination, audit, or litigation discovery notice (which also fires P11 if it carries representation).",
+  pre=["The request is captured verbatim with date, requester, scope, and stated deadline (or the regulatory default)."],
+  phases=[
+   ("Phase 1 - Clock and inventory", [
+    ("1","12","Arm the response clock (regulatory default if none stated)","`deadline.alert` \u2192 02, 14 (at lead-times)","clock live"),
+    ("2","13","Disclosure inventory: existence, type, date, source per item","`records.disclosure.package` \u2192 human, 12","inventory delivered inside lead-time"),
+    ("3","05","Flag items with privilege/work-product markers or third-party content","`doc.received` \u2192 13 (marker references)","flag status per item - flagged, not judged"),
+   ]),
+   ("Phase 2 - Human release", [
+    ("4","13","Record the human's release decision and what was disclosed","`record.response` + `interaction.log`","disclosure record: who, what, when, under whose approval"),
+    ("5","04/02","Transmit per the approved scope (claimant lane via 04 unless represented - then human-only)","`claimant.message.send` / human handoff","transmission artifact on record"),
+   ]),
+  ],
+  gates=["Nothing beyond the approved item list transmits - the human's itemized approval is the ceiling.",
+         "Privilege and work-product calls are human-only - the swarm flags markers, it never decides what is protected.",
+         "If the claim is represented, transmission is human-only end to end (absolute line 5)."],
+  completion="Human-approved disclosure transmitted inside the clock with a complete itemized record; or refusal/clarification recorded the same way.",
+  abort=["Scope ambiguous or overbroad: clarification to human before any work product leaves the swarm.",
+         "Request is litigation discovery: human immediately - discovery response is counsel's lane, the swarm only inventories."]),
 ]

@@ -59,6 +59,8 @@ Dispatcher returns an `ack`.
 | OUT | → human / 13 | Demand package for pursuit decision | `subro.package` |
 | OUT | → 13 Claim File & Records | Record ops + ambient logging | `record.request`, `interaction.log` |
 | IN | ← 13 Claim File & Records | Record responses | `record.response` |
+| IN | ← human | Signed recovery authority - demands and acceptances are human money decisions | `recovery.authority` |
+| IN | ← 08 / 11 | Salvage facts feeding recovery | `salvage.record` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

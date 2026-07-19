@@ -62,6 +62,7 @@ Dispatcher returns an `ack`.
 | OUT | → 09 Fraud Signals | Document anomaly observation | `fraud.signal` |
 | OUT | → 10 Subrogation | Third-party-liability evidence observed | `subro.signal` |
 | OUT | → 13 Claim File & Records | Ambient logging | `interaction.log` |
+| OUT | → 02 / 04 / 12 / 13 | Representation notice arriving with documents | `representation.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

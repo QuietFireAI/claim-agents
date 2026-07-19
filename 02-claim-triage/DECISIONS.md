@@ -19,5 +19,8 @@ constrains everything.
 - (policy verified lapsed on date of loss, package the fact to human immediately; downstream work holds - lapse handling is a licensed decision)
 - (claimant demands a specific adjuster, record the request in the assignment envelope; the matrix and human decide)
 - (closure package has one amber gate, the package does not go to the human as closure-ready; amber is named, not rounded green)
+- (representation.notice lands on an open claim, direct claimant contact halts claim-wide; pending outbound inventoried; human directs the channel - absolute line 5)
+- (policy.change.notice arrives mid-claim, blast radius from 13, affected work re-anchored to corrected facts; posted history never rewritten)
+- (fraud.disposition returns from the human, handling follows the signed direction exactly; the disposition is recorded verbatim - no silent residue of suspicion)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

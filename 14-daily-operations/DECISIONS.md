@@ -18,5 +18,6 @@ constrains everything.
 - (EOD sweep finds a morning item nobody touched, the miss is named with its owner; the sweep never reassigns silently)
 - (cat.event scope is ambiguous (county vs. zip list), rebroadcast with the ambiguity named and the narrower scope active; scope expands only on human direction)
 - (human requests a 'cleaner' book, decline; the book's gaps are its value - integrity.violation if pressed)
+- (agent.status reports a wait past threshold, named in report.package with its age and blocking party; the morning report carries every wait)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

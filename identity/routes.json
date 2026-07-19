@@ -1,5 +1,5 @@
 {
- "version": "0.1",
+ "version": "0.2",
  "vertical": "insurance-claim-agent",
  "routes": [
   {
@@ -44,12 +44,25 @@
    ]
   },
   {
+   "intent": "policy.change.notice",
+   "senders": [
+    "03"
+   ],
+   "receivers": [
+    "02",
+    "08",
+    "12",
+    "13"
+   ]
+  },
+  {
    "intent": "claimant.message.request",
    "senders": [
     "02",
     "03",
     "05",
     "06",
+    "07",
     "08",
     "11",
     "12"
@@ -244,7 +257,7 @@
     "12"
    ],
    "receivers": [
-    "00"
+    "queue"
    ]
   },
   {
@@ -370,6 +383,87 @@
    ],
    "receivers": [
     "queue"
+   ]
+  },
+  {
+   "intent": "agent.status",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "14"
+   ]
+  },
+  {
+   "intent": "reconciliation.exception",
+   "senders": [
+    "11"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "representation.notice",
+   "senders": [
+    "01",
+    "04",
+    "05"
+   ],
+   "receivers": [
+    "02",
+    "04",
+    "12",
+    "13"
+   ]
+  },
+  {
+   "intent": "salvage.record",
+   "senders": [
+    "08",
+    "11"
+   ],
+   "receivers": [
+    "10",
+    "13"
+   ]
+  },
+  {
+   "intent": "recovery.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "10"
+   ]
+  },
+  {
+   "intent": "reserve.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "11"
+   ]
+  },
+  {
+   "intent": "fraud.disposition",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "09"
+   ]
+  },
+  {
+   "intent": "records.disclosure.package",
+   "senders": [
+    "13"
+   ],
+   "receivers": [
+    "human",
+    "12"
    ]
   },
   {

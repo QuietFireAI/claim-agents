@@ -95,6 +95,7 @@ communication in that one guarantee.
 | `claim.assignment` | 02 | 06, 12, 13 |
 | `policy.verify.request` | 02, 08 | 03 |
 | `policy.verify.result` | 03 | 02, 08, 13 |
+| `policy.change.notice` | 03 | 02, 08, 12, 13 |
 | `claimant.message.request` | 02, 03, 05, 06, 07, 08, 11, 12 | 04 |
 | `claimant.message.send` | 04 | external |
 | `claimant.reply` | 04 | 02, 05, 06 |
@@ -125,6 +126,14 @@ communication in that one guarantee.
 | `escalation.*` | any | queue |
 | `clarification.request` | any | queue |
 | `integrity.violation` | any | queue |
+| `agent.status` | any | 14 |
+| `reconciliation.exception` | 11 | human, 13 |
+| `representation.notice` | 01, 04, 05 | 02, 04, 12, 13 |
+| `salvage.record` | 08, 11 | 10, 13 |
+| `recovery.authority` | human | 10 |
+| `reserve.authority` | human | 11 |
+| `fraud.disposition` | human | 09 |
+| `records.disclosure.package` | 13 | human, 12 |
 | `config.update` | human | any |
 
 Any (intent, from, to) tuple not in this table is rejected and logged. The table

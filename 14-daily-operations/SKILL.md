@@ -58,6 +58,7 @@ Dispatcher returns an `ack`.
 | OUT | → 02 Claim Triage | CAT surge rebroadcast | `cat.event` |
 | OUT | → 13 Claim File & Records | Record pulls + ambient logging | `record.request`, `interaction.log` |
 | IN | ← 13 Claim File & Records | Chronologies, exceptions | `record.response` |
+| IN | ← any | Wait-state visibility - waits reported past threshold | `agent.status` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

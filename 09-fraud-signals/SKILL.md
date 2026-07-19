@@ -61,6 +61,7 @@ Dispatcher returns an `ack`.
 | OUT | → 13 Claim File & Records | Record ops | `record.request` |
 | IN | ← 13 Claim File & Records | Prior-claim patterns | `record.response` |
 | OUT | → 13 Claim File & Records | Ambient logging | `interaction.log` |
+| IN | ← human | Signed fraud disposition - a signal never dies quietly | `fraud.disposition` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

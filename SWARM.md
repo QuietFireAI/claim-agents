@@ -8,7 +8,7 @@ defect, not a change.
 
 ## Manifest (generated)
 - Agents: 15 (00-dispatcher + 14 spokes)
-- Routes: 35 entries, 35 distinct intents
+- Routes: 44 entries, 44 distinct intents
 - Playbooks: P01-P10 (playbooks/)
 - Layer stack: MANNERS.md → DISPATCHER_CORE.md → identity/ → DECISIONS.md
   (per agent) → playbooks/ → agent SKILL.md files
@@ -50,7 +50,7 @@ defect, not a change.
 - 12 Compliance & Regulatory Deadlines Agent
 - 13 Claim File & Records Agent
 - 14 Daily Operations Agent
-- Intents: `cat.event`, `claim.assignment`, `claim.fnol`, `claimant.message.request`, `claimant.message.send`, `claimant.reply`, `clarification.request`, `closure.package`, `compliance.hold`, `config.update`, `deadline.alert`, `doc.received`, `doc.request`, `doi.inquiry`, `doi.response.package`, `escalation.*`, `estimate.package`, `fraud.referral`, `fraud.signal`, `inspection.result`, `inspection.schedule`, `integrity.violation`, `interaction.log`, `payment.authority`, `payment.record`, `policy.verify.request`, `policy.verify.result`, `record.request`, `record.response`, `report.package`, `reserve.record`, `subro.package`, `subro.signal`, `vendor.request`, `vendor.status`
+- Intents: `agent.status`, `cat.event`, `claim.assignment`, `claim.fnol`, `claimant.message.request`, `claimant.message.send`, `claimant.reply`, `clarification.request`, `closure.package`, `compliance.hold`, `config.update`, `deadline.alert`, `doc.received`, `doc.request`, `doi.inquiry`, `doi.response.package`, `escalation.*`, `estimate.package`, `fraud.disposition`, `fraud.referral`, `fraud.signal`, `inspection.result`, `inspection.schedule`, `integrity.violation`, `interaction.log`, `payment.authority`, `payment.record`, `policy.change.notice`, `policy.verify.request`, `policy.verify.result`, `reconciliation.exception`, `record.request`, `record.response`, `records.disclosure.package`, `recovery.authority`, `report.package`, `representation.notice`, `reserve.authority`, `reserve.record`, `salvage.record`, `subro.package`, `subro.signal`, `vendor.request`, `vendor.status`
 
 ## Swarm-level decision tuples (predictable scenarios, pre-deliberated)
 - (two playbooks match one trigger, run neither; clarification.request naming both)

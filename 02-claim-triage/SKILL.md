@@ -74,6 +74,8 @@ Dispatcher returns an `ack`.
 | OUT | → human / 13 | Closure package for human decision | `closure.package` |
 | OUT | → 13 Claim File & Records | Record ops + ambient logging | `record.request`, `interaction.log` |
 | IN | ← 13 Claim File & Records | Record responses | `record.response` |
+| IN | ← 01 / 04 / 05 | Representation notice - claim owner directs the halt | `representation.notice` |
+| IN | ← 03 | Mid-claim policy change (endorsement/cancellation discovered) | `policy.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

@@ -19,5 +19,7 @@ constrains everything.
 - (claimant communicates in a language without an approved template, human queue; machine-translating a legal disclosure is a compliance breach)
 - (two message requests to the same claimant in one hour, bundle per the cadence rule; double-texting a claimant is a real-world failure)
 - (claimant reply contains a threat of self-harm, immediate human escalation, highest priority, verbatim; no template applies)
+- (representation.notice received from any source, ALL direct claimant contact halts on that claim immediately; one held-message inventory to 02; silence until human direction)
+- (claimant communication arrives after a representation halt, received, logged, routed to human verbatim; no reply from the swarm - inbound does not reopen the channel)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

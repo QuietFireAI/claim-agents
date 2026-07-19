@@ -66,6 +66,11 @@ Dispatcher returns an `ack`.
 | IN | ← 09 / 10 | Referral and demand packages (audit copies) | `fraud.referral`, `subro.package` |
 | IN | ← 11 Payments & Reserves | Financial records | `payment.record`, `reserve.record` |
 | IN | ← 12 Compliance & Deadlines | Regulatory response packages (audit copies) | `doi.response.package` |
+| OUT | → human / 12 | Disclosure inventory (existence/type/date/source only) for human release | `records.disclosure.package` |
+| IN | ← 01 / 04 / 05 | Representation notice on the claim file | `representation.notice` |
+| IN | ← 03 | Policy change on the claim file | `policy.change.notice` |
+| IN | ← 08 / 11 | Salvage records (file copy) | `salvage.record` |
+| IN | ← 11 | Reconciliation exceptions (books copy) | `reconciliation.exception` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

@@ -18,5 +18,7 @@ constrains everything.
 - (statute date differs by theory of recovery, track the shortest; conservatism is the ratified clock rule here too)
 - (carrier for the third party contacts the swarm directly, route verbatim to human; no acknowledgment beyond receipt)
 - (deductible recovery for the insured rides on pursuit, note it in the package economics; the insured's interest is named, never promised)
+- (recovery demand or settlement acceptance contemplated, package assembled for the human; issuance and acceptance move only on signed recovery.authority - recovery is money)
+- (salvage.record arrives, folded into the recovery package with its source; proceeds netting is arithmetic shown, never judgment applied)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

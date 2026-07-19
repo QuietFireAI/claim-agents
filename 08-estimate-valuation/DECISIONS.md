@@ -18,5 +18,7 @@ constrains everything.
 - (total-loss threshold lands within the rounding margin, report as within-margin, not as a determination either way)
 - (prior-claim damage overlaps this claim's scope, flag the overlap with both claim records; never net it out silently)
 - (estimate requested before inspection results exist, desk-estimate label mandatory with inputs named; an unlabeled desk number reads as an inspected one)
+- (salvage value determined at valuation, salvage.record to 10, 13; salvage is recovery money on a clock, not a footnote)
+- (policy.change.notice affects the valuation basis, valuation re-anchored to corrected policy facts; both bases named in the package - the delta is a fact, not a judgment)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

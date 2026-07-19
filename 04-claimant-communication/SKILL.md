@@ -62,6 +62,8 @@ Dispatcher returns an `ack`.
 | OUT | → 12 Compliance & Deadlines | DOI complaint mentioned in a reply | `doi.inquiry` |
 | IN | ← 12 Compliance & Deadlines | Statutory-notice triggers | `deadline.alert` |
 | OUT | → 13 Claim File & Records | Every send/reply verbatim | `interaction.log` |
+| OUT | → 02 / 04 / 12 / 13 | Representation notice arriving in claimant channel | `representation.notice` |
+| IN | ← 01 / 05 | Representation notice - all direct contact halts on this claim | `representation.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

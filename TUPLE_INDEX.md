@@ -19,6 +19,8 @@ Connected playbooks: all (transport/queues)
 | 00.04 | compliance.hold received mid-run | suspend the named claim's traffic; only 12's release or human direction resumes it |
 | 00.05 | two agents claim the same open request | the earlier record.request wins; the later is re-pointed with the earlier's envelope_id |
 | 00.06 | a spoke reports done without its artifact | treat as not-done; taint gate applies - the artifact is the proof |
+| 00.07 | authority intent arrives with no registered signer for that lane | reject fail-closed + integrity.violation; an unregistered authority lane does not exist |
+| 00.08 | an agent's wait on another passes its timeout | agent.status to 14; waits are visible by rule, never discovered by surprise |
 
 ## Agent 01 - fnol-intake
 Connected playbooks: none (tuple-layer only)
@@ -30,9 +32,10 @@ Connected playbooks: none (tuple-layer only)
 | 01.03 | loss date is 'a while ago' | capture verbatim, mark date unknown; late-report handling is 02/12's clock decision |
 | 01.04 | reporter reports two distinct losses in one call | two FNOL packages, cross-referenced; never merged |
 | 01.05 | emergency in progress (active water, fire aftermath) | capture mitigation-need flag first, full FNOL second; route the flag ahead of package completion |
+| 01.06 | representation or attorney language appears anywhere in the FNOL | representation.notice same turn; direct contact halts before any acknowledgment beyond receipt |
 
 ## Agent 02 - claim-triage
-Connected playbooks: P01, P02, P03, P04, P07
+Connected playbooks: P01, P02, P03, P04, P07, P11, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -41,9 +44,12 @@ Connected playbooks: P01, P02, P03, P04, P07
 | 02.03 | policy verified lapsed on date of loss | package the fact to human immediately; downstream work holds - lapse handling is a licensed decision |
 | 02.04 | claimant demands a specific adjuster | record the request in the assignment envelope; the matrix and human decide |
 | 02.05 | closure package has one amber gate | the package does not go to the human as closure-ready; amber is named, not rounded green |
+| 02.06 | representation.notice lands on an open claim | direct claimant contact halts claim-wide; pending outbound inventoried; human directs the channel - absolute line 5 |
+| 02.07 | policy.change.notice arrives mid-claim | blast radius from 13, affected work re-anchored to corrected facts; posted history never rewritten |
+| 02.08 | fraud.disposition returns from the human | handling follows the signed direction exactly; the disposition is recorded verbatim - no silent residue of suspicion |
 
 ## Agent 03 - policy-verification
-Connected playbooks: P01
+Connected playbooks: P01, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -51,9 +57,11 @@ Connected playbooks: P01
 | 03.02 | endorsement effective date is the loss date itself | report the timestamp collision as a fact with system times; never resolve which came first by assumption |
 | 03.03 | prior verification cached from earlier in this claim | re-verify against the live system; policy facts are re-checked, never remembered |
 | 03.04 | verification requested for a policy in another company's book | refuse; out-of-book lookup is an integrity flag, not a favor |
+| 03.05 | re-verify or carrier feed shows the policy changed mid-claim (endorsement, cancellation, reinstatement) | policy.change.notice with both fact sets and timestamps; a change re-opens verification forward, never rewrites history |
+| 03.06 | policy change implies retroactive cancellation | human notified with the full record; rescission is a licensed/legal conversation, never a swarm statement |
 
 ## Agent 04 - claimant-communication
-Connected playbooks: P02, P04, P07
+Connected playbooks: P02, P04, P07, P11
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -62,9 +70,11 @@ Connected playbooks: P02, P04, P07
 | 04.03 | claimant communicates in a language without an approved template | human queue; machine-translating a legal disclosure is a compliance breach |
 | 04.04 | two message requests to the same claimant in one hour | bundle per the cadence rule; double-texting a claimant is a real-world failure |
 | 04.05 | claimant reply contains a threat of self-harm | immediate human escalation, highest priority, verbatim; no template applies |
+| 04.06 | representation.notice received from any source | ALL direct claimant contact halts on that claim immediately; one held-message inventory to 02; silence until human direction |
+| 04.07 | claimant communication arrives after a representation halt | received, logged, routed to human verbatim; no reply from the swarm - inbound does not reopen the channel |
 
 ## Agent 05 - document-collection
-Connected playbooks: P02, P03, P04, P06, P08
+Connected playbooks: P02, P03, P04, P06, P08, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -73,6 +83,7 @@ Connected playbooks: P02, P03, P04, P06, P08
 | 05.03 | document arrives for the wrong claim number | route to 13 for re-association with provenance; never re-label locally |
 | 05.04 | police report shows a third party at fault | inventory it AND fire subro.signal; evidence duties stack, they don't compete |
 | 05.05 | medical bill arrives unrequested | seal to human lane unopened per custody rule; inventory existence only |
+| 05.06 | attorney letterhead or representation language found in received documents | representation.notice same turn; the document routes on, the channel halts |
 
 ## Agent 06 - inspection-scheduling
 Connected playbooks: P02, P03
@@ -95,7 +106,7 @@ Connected playbooks: P02, P03
 | 07.04 | vendor requests direct claimant contact | deny; all claimant contact flows through 04's templates |
 
 ## Agent 08 - estimate-valuation
-Connected playbooks: P02, P03, P04
+Connected playbooks: P02, P03, P04, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -103,6 +114,8 @@ Connected playbooks: P02, P03, P04
 | 08.02 | total-loss threshold lands within the rounding margin | report as within-margin, not as a determination either way |
 | 08.03 | prior-claim damage overlaps this claim's scope | flag the overlap with both claim records; never net it out silently |
 | 08.04 | estimate requested before inspection results exist | desk-estimate label mandatory with inputs named; an unlabeled desk number reads as an inspected one |
+| 08.05 | salvage value determined at valuation | salvage.record to 10, 13; salvage is recovery money on a clock, not a footnote |
+| 08.06 | policy.change.notice affects the valuation basis | valuation re-anchored to corrected policy facts; both bases named in the package - the delta is a fact, not a judgment |
 
 ## Agent 09 - fraud-signals
 Connected playbooks: P05
@@ -113,9 +126,11 @@ Connected playbooks: P05
 | 09.02 | SIU asks for 'everything suspicious this month' | answer via 13 record scope rules; fishing expeditions get scoped queries, not dumps |
 | 09.03 | an agent asks whether a claim 'is being looked at' | refuse; signal-record existence is need-to-know sealed |
 | 09.04 | indicator arrives on a closed claim | aggregate normally and route at threshold; closure does not expire the referral duty |
+| 09.05 | signed fraud.disposition received | recorded verbatim, aggregation state follows the direction exactly; a signal's ending is signed - referral, cleared, or monitored - or it has not ended |
+| 09.06 | disposition directs continued monitoring | aggregation continues silently per direction; handling still never changes without explicit human instruction - line 3 holds |
 
 ## Agent 10 - subrogation
-Connected playbooks: P06
+Connected playbooks: P06, P13
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -123,9 +138,11 @@ Connected playbooks: P06
 | 10.02 | statute date differs by theory of recovery | track the shortest; conservatism is the ratified clock rule here too |
 | 10.03 | carrier for the third party contacts the swarm directly | route verbatim to human; no acknowledgment beyond receipt |
 | 10.04 | deductible recovery for the insured rides on pursuit | note it in the package economics; the insured's interest is named, never promised |
+| 10.05 | recovery demand or settlement acceptance contemplated | package assembled for the human; issuance and acceptance move only on signed recovery.authority - recovery is money |
+| 10.06 | salvage.record arrives | folded into the recovery package with its source; proceeds netting is arithmetic shown, never judgment applied |
 
 ## Agent 11 - payments-reserves
-Connected playbooks: P02, P03, P04, P07
+Connected playbooks: P02, P03, P04, P07, P13
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -133,9 +150,12 @@ Connected playbooks: P02, P03, P04, P07
 | 11.02 | partial payment authorized against a superseded estimate line | hold; re-confirm - money against stale math is the named failure |
 | 11.03 | reserve decrease authorized while a new estimate is in flight | execute the signed authority AND flag the timing to human; execution and flagging are not alternatives |
 | 11.04 | payee asks for payment split across accounts | hold and route to human; payment-instruction changes are never agent-absorbed |
+| 11.05 | books do not reconcile to the penny | reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach |
+| 11.06 | reserve change contemplated | only signed reserve.authority moves a reserve; reserves are money with regulatory weight, same doctrine as payments |
+| 11.07 | salvage proceeds post | salvage.record to 10, 13; the recovery ledger and claim file update together |
 
 ## Agent 12 - compliance-deadlines
-Connected playbooks: P01, P07, P08
+Connected playbooks: P01, P07, P08, P11, P12, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -143,9 +163,12 @@ Connected playbooks: P01, P07, P08
 | 12.02 | regulator requests an extension response same-day | package immediately with the gap named; a partial package on time beats a full one late - the human signs either way |
 | 12.03 | fair-claims rule conflicts with a playbook step | compliance.hold; spec defect doctrine - the playbook halts, the rule does not bend |
 | 12.04 | new jurisdiction rule announced but not yet ratified into the table | alert the human with the delta; the table changes only by ratification |
+| 12.05 | representation.notice received | fair-claims-practice clocks re-checked for the represented posture; every pending contact-based deadline re-anchored |
+| 12.06 | policy.change.notice received | statutory and contract clocks re-derived from corrected facts; conservatism rule governs - the earlier date wins |
+| 12.07 | records.disclosure.package pending past lead-time | deadline.alert; a records-response clock is a clock like any other |
 
 ## Agent 13 - claim-file-records
-Connected playbooks: P05
+Connected playbooks: P05, P11, P12, P13, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -153,6 +176,8 @@ Connected playbooks: P05
 | 13.02 | record request for a sealed medical entry | refuse with the seal named; unsealing is human-only regardless of requester |
 | 13.03 | chronology requested spanning a litigation hold | produce it AND name the hold; production rules are counsel's call |
 | 13.04 | storage failure detected on write | the write is not done until re-verified on storage; an unconfirmed write is reported failed, never assumed |
+| 13.05 | external records request arrives (claimant file access, examination, audit) | assemble the disclosure inventory - existence, type, date, source only - records.disclosure.package to human and 12; release is a human decision, itemized |
+| 13.06 | representation.notice received | logged to the claim file verbatim with source and timestamp; the file shows when the posture changed |
 
 ## Agent 14 - daily-operations
 Connected playbooks: P09, P10
@@ -163,5 +188,6 @@ Connected playbooks: P09, P10
 | 14.02 | EOD sweep finds a morning item nobody touched | the miss is named with its owner; the sweep never reassigns silently |
 | 14.03 | cat.event scope is ambiguous (county vs. zip list) | rebroadcast with the ambiguity named and the narrower scope active; scope expands only on human direction |
 | 14.04 | human requests a 'cleaner' book | decline; the book's gaps are its value - integrity.violation if pressed |
+| 14.05 | agent.status reports a wait past threshold | named in report.package with its age and blocking party; the morning report carries every wait |
 
-Total tuples: 66. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.
+Total tuples: 92. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.

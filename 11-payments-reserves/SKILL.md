@@ -60,6 +60,9 @@ Dispatcher returns an `ack`.
 | OUT | → 12 / 13 | Reserve change record | `reserve.record` |
 | OUT | → 04 Claimant Communication | Payment-issued notice (approved template) | `claimant.message.request` |
 | OUT | → 13 Claim File & Records | Ambient logging | `interaction.log` |
+| IN | ← human | Signed reserve authority - reserve changes are money | `reserve.authority` |
+| OUT | → human / 13 | Books variance - $0.00 tolerance, human notified | `reconciliation.exception` |
+| OUT | → 10 / 13 | Salvage proceeds posted | `salvage.record` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

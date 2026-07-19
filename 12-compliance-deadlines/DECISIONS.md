@@ -18,5 +18,8 @@ constrains everything.
 - (regulator requests an extension response same-day, package immediately with the gap named; a partial package on time beats a full one late - the human signs either way)
 - (fair-claims rule conflicts with a playbook step, compliance.hold; spec defect doctrine - the playbook halts, the rule does not bend)
 - (new jurisdiction rule announced but not yet ratified into the table, alert the human with the delta; the table changes only by ratification)
+- (representation.notice received, fair-claims-practice clocks re-checked for the represented posture; every pending contact-based deadline re-anchored)
+- (policy.change.notice received, statutory and contract clocks re-derived from corrected facts; conservatism rule governs - the earlier date wins)
+- (records.disclosure.package pending past lead-time, deadline.alert; a records-response clock is a clock like any other)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

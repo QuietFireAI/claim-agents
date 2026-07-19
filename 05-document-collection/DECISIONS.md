@@ -19,5 +19,6 @@ constrains everything.
 - (document arrives for the wrong claim number, route to 13 for re-association with provenance; never re-label locally)
 - (police report shows a third party at fault, inventory it AND fire subro.signal; evidence duties stack, they don't compete)
 - (medical bill arrives unrequested, seal to human lane unopened per custody rule; inventory existence only)
+- (attorney letterhead or representation language found in received documents, representation.notice same turn; the document routes on, the channel halts)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

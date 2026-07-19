@@ -60,6 +60,7 @@ Dispatcher returns an `ack`.
 | OUT | → 05 Document Collection | Missing policy docs | `doc.request` |
 | OUT | → 04 Claimant Communication | Doc-chase message request (adjuster-approved template only) | `claimant.message.request` |
 | OUT | → 13 Claim File & Records | Ambient logging | `interaction.log` |
+| OUT | → 02 / 08 / 12 / 13 | Mid-claim policy fact change with both fact sets | `policy.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

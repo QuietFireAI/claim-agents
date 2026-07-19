@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); rule entries are deployment content - an empty table is fail-closed by structure (nothing matches, so nothing moves without signed authority)",
  "_table": "reserve_rules",
  "_purpose": "Reserve-setting rules the records lane may cite",
  "_fields": [
@@ -13,5 +13,6 @@
    "condition": "<example>",
    "reserve_basis": "<example>"
   }
- ]
+ ],
+ "_doctrine": "ZERO-THRESHOLD RULE (ratified 2026-07-18, permeates all identity blueprints): entries matching a loaded, ratified rule apply automatically with the rule citation; ANY other payment, reserve change, or recovery action, ANY amount, moves only on signed human authority (payment.authority / reserve.authority / recovery.authority). No dollar threshold, no de-minimis lane. Books reconciliation tolerance is $0.00 - any variance is reconciliation.exception to the human; 'close enough' is the named breach."
 }

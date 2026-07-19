@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "ROUTING DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); signal categories are deployment content refined against the book of business",
  "_table": "fraud_signal_taxonomy",
  "_purpose": "Ratified signal categories 09 reports as facts",
  "_fields": [
@@ -13,5 +13,6 @@
    "category": "<example>",
    "description": "<example>"
   }
- ]
+ ],
+ "_doctrine": "SILENT AGGREGATION, SIGNED ENDINGS (ratified 2026-07-18): signals aggregate silently; handling NEVER changes on suspicion (absolute line 3 - delay-on-suspicion is the named unfair claims practice). Every aggregation ends in a signed human fraud.disposition - referral, cleared, or monitored. A signal never dies quietly."
 }

@@ -18,5 +18,8 @@ constrains everything.
 - (partial payment authorized against a superseded estimate line, hold; re-confirm - money against stale math is the named failure)
 - (reserve decrease authorized while a new estimate is in flight, execute the signed authority AND flag the timing to human; execution and flagging are not alternatives)
 - (payee asks for payment split across accounts, hold and route to human; payment-instruction changes are never agent-absorbed)
+- (books do not reconcile to the penny, reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach)
+- (reserve change contemplated, only signed reserve.authority moves a reserve; reserves are money with regulatory weight, same doctrine as payments)
+- (salvage proceeds post, salvage.record to 10, 13; the recovery ledger and claim file update together)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

@@ -18,5 +18,7 @@ constrains everything.
 - (SIU asks for 'everything suspicious this month', answer via 13 record scope rules; fishing expeditions get scoped queries, not dumps)
 - (an agent asks whether a claim 'is being looked at', refuse; signal-record existence is need-to-know sealed)
 - (indicator arrives on a closed claim, aggregate normally and route at threshold; closure does not expire the referral duty)
+- (signed fraud.disposition received, recorded verbatim, aggregation state follows the direction exactly; a signal's ending is signed - referral, cleared, or monitored - or it has not ended)
+- (disposition directs continued monitoring, aggregation continues silently per direction; handling still never changes without explicit human instruction - line 3 holds)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

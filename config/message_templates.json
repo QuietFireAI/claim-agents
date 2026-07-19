@@ -14,6 +14,12 @@
    "purpose": "<example>",
    "body": "<example>",
    "approved_by": "<example>"
+  },
+  {
+   "template_id": "representation_acknowledged",
+   "purpose": "One-time receipt acknowledgment to a newly-noticed representative, sent ONLY on human direction",
+   "body": "We acknowledge receipt of your letter of representation dated {date} regarding claim {claim_number}. All further communication on this claim will be directed to your office.",
+   "approved_by": "<owner name/date>"
   }
  ]
 }

@@ -19,5 +19,6 @@ constrains everything.
 - (loss date is 'a while ago', capture verbatim, mark date unknown; late-report handling is 02/12's clock decision)
 - (reporter reports two distinct losses in one call, two FNOL packages, cross-referenced; never merged)
 - (emergency in progress (active water, fire aftermath), capture mitigation-need flag first, full FNOL second; route the flag ahead of package completion)
+- (representation or attorney language appears anywhere in the FNOL, representation.notice same turn; direct contact halts before any acknowledgment beyond receipt)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

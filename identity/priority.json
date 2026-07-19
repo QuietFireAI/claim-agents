@@ -1,5 +1,5 @@
 {
- "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written",
+ "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written; P11-P14 classes added and ratified 2026-07-18 (owner: Jeff Phillips) - P11 class 1: representation halt is legal exposure on a same-turn clock",
  "_doctrine": "JIT run-priority per core doctrine: class 1 = statutory/SLA-critical (FNOL front door, fraud referral, DOI response), class 2 = active-claim lifecycle and books, class 3 = recovery preparation. Pacing over braking: the siding scheduler paces class contention; nothing slam-stops.",
  "classes": {
   "P01": 1,
@@ -11,6 +11,10 @@
   "P07": 2,
   "P08": 1,
   "P09": 2,
-  "P10": 2
+  "P10": 2,
+  "P11": 1,
+  "P12": 2,
+  "P13": 3,
+  "P14": 2
  }
 }

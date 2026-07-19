@@ -65,6 +65,9 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Claimant Communication | Statutorily required notices (approved templates) | `claimant.message.request` |
 | OUT | → 13 Claim File & Records | Record ops + ambient logging | `record.request`, `interaction.log` |
 | IN | ← 13 Claim File & Records | Chronology records | `record.response` |
+| IN | ← 01 / 04 / 05 | Representation notice - clock and practice implications | `representation.notice` |
+| IN | ← 03 | Policy change - clock implications re-checked | `policy.change.notice` |
+| IN | ← 13 | Records disclosure pending - response clock armed | `records.disclosure.package` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

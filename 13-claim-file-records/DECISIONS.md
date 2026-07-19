@@ -18,5 +18,7 @@ constrains everything.
 - (record request for a sealed medical entry, refuse with the seal named; unsealing is human-only regardless of requester)
 - (chronology requested spanning a litigation hold, produce it AND name the hold; production rules are counsel's call)
 - (storage failure detected on write, the write is not done until re-verified on storage; an unconfirmed write is reported failed, never assumed)
+- (external records request arrives (claimant file access, examination, audit), assemble the disclosure inventory - existence, type, date, source only - records.disclosure.package to human and 12; release is a human decision, itemized)
+- (representation.notice received, logged to the claim file verbatim with source and timestamp; the file shows when the posture changed)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

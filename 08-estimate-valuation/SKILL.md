@@ -66,6 +66,8 @@ Dispatcher returns an `ack`.
 | OUT | → 09 / 10 | Valuation-stage observations | `fraud.signal`, `subro.signal` |
 | OUT | → 04 Claimant Communication | Doc-support message requests | `claimant.message.request` |
 | OUT | → 13 Claim File & Records | Ambient logging | `interaction.log` |
+| OUT | → 10 / 13 | Salvage value facts for recovery | `salvage.record` |
+| IN | ← 03 | Policy change affecting valuation basis | `policy.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

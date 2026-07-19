@@ -18,5 +18,7 @@ constrains everything.
 - (endorsement effective date is the loss date itself, report the timestamp collision as a fact with system times; never resolve which came first by assumption)
 - (prior verification cached from earlier in this claim, re-verify against the live system; policy facts are re-checked, never remembered)
 - (verification requested for a policy in another company's book, refuse; out-of-book lookup is an integrity flag, not a favor)
+- (re-verify or carrier feed shows the policy changed mid-claim (endorsement, cancellation, reinstatement), policy.change.notice with both fact sets and timestamps; a change re-opens verification forward, never rewrites history)
+- (policy change implies retroactive cancellation, human notified with the full record; rescission is a licensed/legal conversation, never a swarm statement)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)
