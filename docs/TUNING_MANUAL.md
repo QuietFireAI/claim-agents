@@ -1,5 +1,13 @@
 # TUNING_MANUAL - claim-agents
 
+## MCP mount status (2026-07-19)
+
+| Item | Status |
+|---|---|
+| MCP mount | **WORKING** - `dispatcher/identity_mcp.py` (4-tool closed surface, boot conformance gate probing claim's own signed authority lane), proven by `tools/mcp_roundtrip.py` live stdio round trip: FNOL captured, illegal intent refused, unsigned money rejected, signed executed, chain verified. Mounts on Hermes/OpenClaw/Claude Desktop (docs/MOUNTING.md). Live-host install not yet exercised; the MCP protocol is. |
+| Front door | `fnol.capture` (first notice of loss) runs the claim behind the gates; the host cannot route inside the swarm. |
+
+
 Every configurable parameter, placeholder, and ratification in this identity.
 Rule (inherited doctrine): any commit introducing a tunable updates this
 manual in the same commit.
