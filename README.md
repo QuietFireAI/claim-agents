@@ -9,6 +9,24 @@ code. That split is the architecture.
 **Status: v0.1 ratified 2026-07-11 - owner sign-off. Not runtime-hardened. No
 licensed legal, regulatory, or insurance-practice review has been performed.**
 
+## See it work (2 minutes)
+
+```
+pip install -r requirements.txt
+python3 tools/run_demo.py        # one claim, six acts, real hub
+python -m pytest tests_claim/    # every playbook P01-P14, every gate
+```
+
+The demo runs FNOL to money live: policy facts (never statements), a
+sourced estimate with salvage feeding the recovery lane, an attorney
+letter halting the claimant channel same turn, a fraud signal
+aggregating silently with a SIGNED ending, an unsigned $5,000 payment
+rejected then a signed one posting with a one-cent variance caught, a
+"you are covered" message blocked at the door, and a verified hash
+chain. docs/START_HERE.md is the 60-second tour;
+docs/OPERATOR_TESTING_MANUAL.md is the filmable script with adversarial
+tests.
+
 ## What this is for
 
 Operations support for a licensed adjuster or claims desk: part intake

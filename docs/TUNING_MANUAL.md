@@ -19,7 +19,8 @@ listed here. If it's not in this table it's ratified content or real spec.
 | Carrier rule table | `config/carrier_rule_table.json` | **DEPLOYMENT CONTENT** | Owner-ratified version required before lifecycle playbooks run. |
 | Vendor panel | `config/vendor_panel.json` | **UNRATIFIED — fails closed** | Needs your actual vendor relationships; loads refuse while UNRATIFIED stands. |
 | Message templates | `config/message_templates.json` | **UNRATIFIED — awaiting owner sign-off per template** | Fill `approved_by` per template to ratify wording (includes new `representation_acknowledged`). |
-| Runtime | whole repo | **BLUEPRINT, not runtime-hardened** | Side-loads into the dispatcher-agents runtime; no working build exists yet (owner decision 2026-07-18, Option A). |
+| Hermes / OpenClaw adapters | `docs/SERVING_HERMES_OPENCLAW.md` | **CONTRACT-COMPLETE, NOT EXERCISED** | Owner decision C4: Hermes is the first mount target; acceptance-gate results record there. |
+| Runtime | `dispatcher/` + `tests_claim/` | **WORKING BUILD (2026-07-18, owner decision C3)** | Vendored dispatcher core (incl. C1 fail-closed loader) + 14 real spokes; 17-test e2e suite covers P01-P14 and every absolute line; `tools/run_demo.py` runs one claim end to end. Exhaustive per-tuple coverage (92 tuples) is the next pass - tracked, not pretended. |
 
 ---
 
